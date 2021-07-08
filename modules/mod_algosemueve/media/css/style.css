@@ -1,0 +1,26 @@
+/**
+ * @version     CVS: 1.0.0
+ * @package     com_algosemueve
+ * @subpackage  mod_algosemueve
+ * @copyright   2021 Ciro Artigot Cordero
+ * @license     Licencia Pública General GNU versión 2 o posterior. Consulte LICENSE.txt
+ * @author      Ciro Artigot Cordero <info@algosemueve.es>
+ */
+
+.jcc-table {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.jcc-table tr{
+    border: none;
+}
+
+.jcc-table td, .jcc-table th{
+    padding: 8px;
+    line-height: 18px;
+    text-align: left;
+    vertical-align: top;
+    border: none;
+    border-top: 1px solid #ddd;
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="plugin" group="finder">
+    <name>plg_finder_algosemueveleads</name>
+    <author>Ciro Artigot Cordero</author>
+    <creationDate>2021-07-07</creationDate>
+    <copyright>2021 Ciro Artigot Cordero</copyright>
+    <license>Licencia Pública General GNU versión 2 o posterior. Consulte LICENSE.txt</license>
+    <authorEmail>info@algosemueve.es</authorEmail>
+    <authorUrl>https://algosemueve.es</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>PLG_FINDER_COM_ALGOSEMUEVE_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="algosemueveleads">algosemueveleads.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="languages">
+        
+			<language tag="en-GB">en-GB/plg_finder_algosemueveleads.ini</language>
+			<language tag="en-GB">en-GB/plg_finder_algosemueveleads.sys.ini</language>
+    </languages>
+    <config>
+    </config>
+</extension>

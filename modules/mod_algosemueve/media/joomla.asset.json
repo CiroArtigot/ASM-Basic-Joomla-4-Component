@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "mod_algosemueve",
+  "version": "CVS: 1.0.0",
+  "license": "Licencia Pública General GNU versión 2 o posterior. Consulte LICENSE.txt",
+  "assets": [
+    {
+      "name": "mod_algosemueve.style",
+      "type": "style",
+      "uri": "mod_algosemueve/style.css"
+    },
+    {
+      "name": "mod_algosemueve.script",
+      "type": "script",
+      "uri": "mod_algosemueve/script.js"
+    }
+  ]
+}

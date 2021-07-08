@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "com_algosemueve",
+  "version": "CVS: 1.0.0",
+  "license": "Licencia Pública General GNU versión 2 o posterior. Consulte LICENSE.txt",
+  "assets": [
+    {
+      "name": "com_algosemueve.admin",
+      "type": "style",
+      "uri": "com_algosemueve/admin.css"
+    },
+    {
+      "name": "com_algosemueve.admin",
+      "type": "script",
+      "uri": "com_algosemueve/admin.js",
+      "dependencies": [
+        "jquery"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+        "name": "com_algosemueve.list",
+        "type": "style",
+        "uri": "com_algosemueve/list.css"
+    }
+  ]
+}

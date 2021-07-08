@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="4.0" method="upgrade" client="site">
+    <name>MOD_ALGOSEMUEVE_NAME</name>
+    <creationDate>2021-07-07</creationDate>
+    <copyright>2021 Ciro Artigot Cordero</copyright>
+    <license>Licencia Pública General GNU versión 2 o posterior. Consulte LICENSE.txt</license>
+    <author>Ciro Artigot Cordero</author>
+    <authorEmail>info@algosemueve.es</authorEmail>
+    <authorUrl>https://algosemueve.es</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>MOD_ALGOSEMUEVE_DESCRIPTION</description>
+    <namespace path="src">Algosemueve\Module\Algosemueve</namespace>
+    
+    <files>
+        <filename module="mod_algosemueve">mod_algosemueve.php</filename>
+        <filename>index.html</filename>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+    <media destination="mod_algosemueve" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <filename>joomla.asset.json</filename>
+    </media>
+    <languages folder="language">
+        
+			<language tag="en-GB">en-GB/mod_algosemueve.ini</language>
+			<language tag="en-GB">en-GB/mod_algosemueve.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset 
+                name="content_type" 
+                label="MOD_ALGOSEMUEVE_CONTENT_TYPE_TAB_LBL"
+                description="MOD_ALGOSEMUEVE_CONTENT_TYPE_TAB_DESC">
+                <field
+                    name="content_type" type="list"
+                    label="MOD_ALGOSEMUEVE_CONTENT_TYPE_LBL"
+                    description="MOD_ALGOSEMUEVE_CONTENT_TYPE_DESC">
+                    <option value="blank">MOD_ALGOSEMUEVE_CUSTOM_CONTENT</option>
+                    <option value="list">MOD_ALGOSEMUEVE_LIST</option>
+                    <option value="item">MOD_ALGOSEMUEVE_ITEM</option>
+                </field>
+            </fieldset>
+            <fieldset 
+                name="blank_content" 
+                label="MOD_ALGOSEMUEVE_CUSTOM_CONTENT_TAB_LBL"
+                description="MOD_ALGOSEMUEVE_CUSTOM_CONTENT_TAB_DESC">
+                <field 
+                    name="html_content" type="editor" filter="safehtml"
+                    label="MOD_ALGOSEMUEVE_HTML_LBL"
+                    description="MOD_ALGOSEMUEVE_HTML_DESC" />
+            </fieldset>
+            <fieldset 
+                name="list_content" 
+                label="MOD_ALGOSEMUEVE_LIST_CONTENT_TAB_LBL"
+                description="MOD_ALGOSEMUEVE_LIST_CONTENT_TAB_DESC">
+                <field
+                    name="table" type="list"
+                    label="MOD_ALGOSEMUEVE_TABLE_LBL"
+                    description="MOD_ALGOSEMUEVE_TABLE_DESC">
+                    
+	<option value="#__algosemueve_leads">#__algosemueve_leads</option>
+                </field>
+                <field 
+                    name="field" type="groupedlist" default=""
+                    label="MOD_ALGOSEMUEVE_FIELD_LBL"
+                    description="MOD_ALGOSEMUEVE_FIELD_DESC">
+                    
+	<group label="#__algosemueve_leads">
+		<option value="#__algosemueve_leads:id">id</option>
+		<option value="#__algosemueve_leads:created_by">created_by</option>
+		<option value="#__algosemueve_leads:modified_by">modified_by</option>
+		<option value="#__algosemueve_leads:firstname">firstname</option>
+		<option value="#__algosemueve_leads:lastname">lastname</option>
+		<option value="#__algosemueve_leads:description">description</option>
+		<option value="#__algosemueve_leads:email">email</option>
+		<option value="#__algosemueve_leads:catid">catid</option>
+		<option value="#__algosemueve_leads:tags">tags</option>
+		<option value="#__algosemueve_leads:image">image</option>
+	</group>
+                </field>
+                <field 
+                    name="offset" type="text" default="0" filter="uint" class="input-small"
+                    label="MOD_ALGOSEMUEVE_OFFSET_LBL"
+                    description="MOD_ALGOSEMUEVE_OFFSET_DESC" />
+                <field 
+                    name="limit" type="text" default="10" filter="uint" class="input-small"
+                    label="MOD_ALGOSEMUEVE_LIMIT_LBL"
+                    description="MOD_ALGOSEMUEVE_LIMIT_DESC" />
+            </fieldset>
+            <fieldset 
+                name="item_content" 
+                label="MOD_ALGOSEMUEVE_ITEM_CONTENT_TAB"
+                description="MOD_ALGOSEMUEVE_ITEM_CONTENT_TAB_DESC">
+                <field
+                    name="item_table" type="list"
+                    label="MOD_ALGOSEMUEVE_TABLE_LBL"
+                    description="MOD_ALGOSEMUEVE_TABLE_DESC">
+                    
+	<option value="#__algosemueve_leads">#__algosemueve_leads</option>
+                </field>
+                <field 
+                    name="item_id" type="text" filter="uint" class="input-small"
+                    label="MOD_ALGOSEMUEVE_ITEM_ID_LBL"
+                    description="MOD_ALGOSEMUEVE_ITEM_ID_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
