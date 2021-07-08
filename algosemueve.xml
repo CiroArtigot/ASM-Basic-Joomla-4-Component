@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="4.0" method="upgrade">
+    <name>com_algosemueve</name>
+    <creationDate>2021-07-07</creationDate>
+    <copyright>2021 Ciro Artigot Cordero</copyright>
+    <license>Licencia Pública General GNU versión 2 o posterior. Consulte LICENSE.txt</license>
+    <author>Ciro Artigot Cordero</author>
+    <authorEmail>info@algosemueve.es</authorEmail>
+    <authorUrl>https://algosemueve.es</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>COM_ALGOSEMUEVE_XML_DESCRIPTION</description>
+    <namespace path="src">Algosemueve\Component\Algosemueve</namespace>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    
+
+    <files folder="site">
+        <folder>src</folder>
+        <folder>forms</folder>
+        <folder>tmpl</folder>
+    </files>
+    <media destination="com_algosemueve" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <filename>joomla.asset.json</filename>
+    </media>
+    <languages folder="site/languages">
+        
+			<language tag="en-GB">en-GB/com_algosemueve.ini</language>
+    </languages>
+    <administration>
+        <menu>COM_ALGOSEMUEVE</menu>
+        <submenu>
+            
+			<menu link="option=com_algosemueve&amp;view=leads" view="leads" alt="Algosemueve/Leads">COM_ALGOSEMUEVE_TITLE_LEADS</menu>
+
+			<menu link="option=com_categories&amp;extension=com_algosemueve.leads" view="categories" alt="Algosemueve/Categories">COM_ALGOSEMUEVE_LEADS_CATID</menu>
+
+			<menu link="option=com_algosemueve&amp;view=blankviews" view="blankviews" alt="Algosemueve/Blankviews">COM_ALGOSEMUEVE_TITLE_BLANKVIEWS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <folder>forms</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+            <folder>services</folder>
+            <folder>presets</folder>
+            <folder>sql</folder>
+        </files>
+        <languages folder="administrator/languages">
+            
+			<language tag="en-GB">en-GB/com_algosemueve.ini</language>
+			<language tag="en-GB">en-GB/com_algosemueve.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+		<plugin group="finder" plugin="algosemueveleads"/>
+    </plugins>
+    <modules>
+		<module module="mod_algosemueve" />
+	</modules>
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->
