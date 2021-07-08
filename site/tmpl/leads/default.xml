@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_ALGOSEMUEVE_TITLE_LIST_VIEW_LEADS" option="View">
+        <message>
+                        <![CDATA[COM_ALGOSEMUEVE_TITLE_LIST_VIEW_LEADS_DESC]]>
+        </message>
+	</layout>
+	
+			<fields name="request">
+				<fieldset name="request"
+					addfieldpath="/administrator/components/com_categories/models/fields"
+				>
+					<field
+						name="id"
+						type="category"
+						label="JGLOBAL_CHOOSE_CATEGORY_LABEL"
+						description="JGLOBAL_CHOOSE_CATEGORY_DESC"
+						extension="com_algosemueve.leads"
+						show_root="true"
+						published="1"
+					/>
+				</fieldset>
+			</fields>
+			
+</metadata>

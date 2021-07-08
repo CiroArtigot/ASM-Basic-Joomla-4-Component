@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_ALGOSEMUEVE_TITLE_LIST_VIEW_BLANKVIEWS" option="View">
+        <message>
+                        <![CDATA[COM_ALGOSEMUEVE_TITLE_LIST_VIEW_BLANKVIEWS_DESC]]>
+        </message>
+	</layout>
+
+
+	<fields name="params">		
+		<fieldset name="params"
+		label="Include layout"
+		>
+			<field name="include" type="filelist" default="default.php" label="Select a layout" description="Select your uploaded file to the components/com_algosemueve/tmpl/blankviews/ folder and easy create your own component." directory="components/com_algosemueve/tmpl/blankviews/includes/"  stripext="" />	
+		</fieldset>
+	</fields>
+	
+</metadata>
